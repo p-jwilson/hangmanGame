@@ -1,0 +1,150 @@
+.page {
+  padding: 18px 18px 28px;
+}
+
+.header {
+  font-family: "Share Tech", sans-serif;
+  text-align: center;
+  font-size: 56px;
+  letter-spacing: 1px;
+  margin: 10px 0 18px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  min-width: 0;
+}
+
+.spacer {
+  height: 18px;
+}
+
+.btn {
+  font-family: "Share Tech", sans-serif;
+  font-size: 26px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  background: #fff;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.hangmanImg {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.wordRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: flex-end;
+  margin: 18px 0 10px;
+}
+
+.letterSlot {
+  width: 64px;
+}
+
+.slotInner {
+  position: relative;
+  width: 64px;
+  height: 86px;
+}
+
+.lineImg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 64px;
+  height: auto;
+}
+
+.letterImg {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 64px;
+  height: auto;
+}
+
+.guessForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0 18px;
+  font-family: "Share Tech", sans-serif;
+  font-size: 26px;
+}
+
+.guessForm input {
+  font-size: 22px;
+  width: 52px;
+  text-align: center;
+  padding: 6px 8px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.guessForm button {
+  font-family: "Share Tech", sans-serif;
+  font-size: 22px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  background: #fff;
+  cursor: pointer;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(13, 52px);
+  gap: 10px;
+  justify-content: start;
+}
+
+.keyImg {
+  width: 52px;
+  height: 52px;
+  display: block;
+}
+
+.answerReveal {
+  font-family: "Share Tech", sans-serif;
+  font-size: 28px;
+  margin-top: 14px;
+}
+
+.lives {
+  font-family: "Share Tech", sans-serif;
+  font-size: 30px;
+  margin-top: 18px;
+}
+
+.guessMessage {
+  font-family: "Share Tech", sans-serif;
+  font-size: 20px;
+  color: #cc0000;
+  margin-top: 6px;
+}
