@@ -1,5 +1,6 @@
 .page {
   padding: 18px 18px 28px;
+  font-family: "Share Tech", sans-serif;
 }
 
 .header {
@@ -147,4 +148,99 @@
   font-size: 20px;
   color: #cc0000;
   margin-top: 6px;
+}
+
+.authScreen {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authPanel {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  font-family: "Share Tech", sans-serif;
+}
+
+.authInput {
+  width: 100%;
+  font-family: "Share Tech", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 12px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.authButtons {
+  width: 100%;
+}
+
+.authButtonsVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authButton {
+  width: 100%;
+  font-family: "Share Tech", sans-serif;
+  font-size: 26px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 2px solid #111;
+  background: #fff;
+  cursor: pointer;
+}
+
+.authButton:active {
+  transform: translateY(1px);
+}
+
+.authSubtext {
+  font-family: "Share Tech", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+.authMessage {
+  font-family: "Share Tech", sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.playerCard {
+  width: 100%;
+  max-width: 320px;
+  border: 2px solid #111;
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #fff;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-family: "Share Tech", sans-serif;
+}
+
+.playerCard h3 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+
+.playerCard p {
+  font-size: 22px;
+  margin: 6px 0;
+}
+
+.left .btn + .btn {
+  margin-top: 12px;
 }

@@ -9,6 +9,10 @@
     "preview": "vite preview --host 0.0.0.0 --port 4173"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.1030.0",
+    "@aws-sdk/lib-dynamodb": "^3.1030.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -21,6 +25,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "nodemon": "^3.1.14",
     "vite": "^7.3.1"
   }
 }
