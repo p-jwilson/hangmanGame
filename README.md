@@ -61,6 +61,47 @@ Docker is optional but recommended for distributing applications without requiri
 
 ---
 
+### Install AWS CLI & Configure Credentials (Required for Backend)
+
+Install AWS CLI:
+
+brew install awscli
+
+Verify:
+
+aws --version
+
+Configure credentials:
+
+aws --configure 
+
+
+You will need:
+- Access Key ID  
+- Secret Access Key  
+- Region (e.g., us-east-1)
+
+---
+
+## Backend (Express API + DynamoDB)
+
+The backend provides a REST API for managing player data and persists it in AWS DynamoDB.
+
+### DynamoDB Table Schema
+
+Table Name: `HangmanPlayers`
+
+| Attribute | Type | Description |
+|----------|------|------------|
+| name     | String (PK) | Unique username |
+| wins     | Number | Total wins |
+| losses   | Number | Total losses |
+
+### Duplicate Protection
+
+Registration uses a condition expression to prevent duplicate usernames.
+
+
 ## Core Dependencies
 
 ### JavaScript (ES6+)
@@ -114,6 +155,12 @@ hangman/
 letters/
 keys/
 Line.drawio.png
+
+server/
+app.js
+index.js
+db.js
+playerRouting.test.js
 
 src/
 components/
@@ -213,6 +260,7 @@ This project demonstrates the integration of several important modern developmen
 
 - Component-based frontend development with React  
 - Rapid development workflows using Vite  
+- Cloud persistence with DynamoDB  
 - Version control with GitHub  
 - Containerized deployment using Docker  
 

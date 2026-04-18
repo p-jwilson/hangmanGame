@@ -1,9 +1,9 @@
-/* NEW FILE: server/playerRoutes.test.js */
+
 
 import request from "supertest";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
-/* NEW: mock db.send so tests do not hit AWS */
+// Creates a mock database so tests don't touch production code
 const sendMock = vi.fn();
 
 vi.mock("./db.js", () => {
@@ -21,6 +21,7 @@ describe("Player API", () => {
   });
 
   describe("GET /player/:name", () => {
+    // Verifies handling of unauthenticated players
     it("returns 404 when player does not exist", async () => {
       sendMock.mockResolvedValueOnce({});
 
@@ -30,6 +31,7 @@ describe("Player API", () => {
       expect(res.body.message).toBe("Player not found.");
     });
 
+    // Verifies handling of authenticated players
     it("returns 200 and player data when player exists", async () => {
       sendMock.mockResolvedValueOnce({
         Item: {
@@ -51,6 +53,7 @@ describe("Player API", () => {
   });
 
   describe("POST /player", () => {
+    // Verifies player registration on success
     it("returns 201 when player is created", async () => {
       sendMock.mockResolvedValueOnce({});
 
@@ -64,6 +67,7 @@ describe("Player API", () => {
       });
     });
 
+    // Verifies error handling on repeat registration request
     it("returns 409 when username already exists", async () => {
       const error = new Error("duplicate");
       error.name = "ConditionalCheckFailedException";
